@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  client-backend:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db-itrum
+    environment:
+      - SPRING_CONFIG_LOCATION=/app/application.properties
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+
+  db-itrum:
+    image: postgres:14-alpine
+    container_name: db-itrum
+    ports:
+      - "6541:5432"
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=itrumDB
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
