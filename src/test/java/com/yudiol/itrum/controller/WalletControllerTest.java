@@ -49,7 +49,7 @@ class WalletControllerTest {
     @SneakyThrows
     void changeBalance() {
 
-        Wallet wallet = new Wallet(walletId, OperationType.DEPOSIT, 100L);
+        Wallet wallet = new Wallet(walletId,  100L);
 
         String result = mockMvc.perform(patch("/api/v1/wallets")
 

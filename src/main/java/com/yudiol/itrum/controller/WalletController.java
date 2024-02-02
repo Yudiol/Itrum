@@ -1,7 +1,7 @@
 package com.yudiol.itrum.controller;
 
+import com.yudiol.itrum.dto.RequestWallet;
 import com.yudiol.itrum.dto.ResponseAmount;
-import com.yudiol.itrum.model.Wallet;
 import com.yudiol.itrum.service.WalletService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +31,7 @@ public class WalletController {
     }
 
     @PatchMapping()
-    public ResponseEntity<String> changeBalance(@RequestBody @Valid Wallet wallet) {
+    public ResponseEntity<String> changeBalance(@RequestBody @Valid RequestWallet wallet) {
         service.changeBalance(wallet);
         return ResponseEntity.ok("Баланс был успешно изменён");
     }

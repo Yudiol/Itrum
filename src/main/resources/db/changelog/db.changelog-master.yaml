@@ -3,3 +3,4 @@ databaseChangeLog:
       file: db/changelog/v.1.0.0/changeset/2024-01-31-create_table_transactions.sql
   - include:
       file: db/changelog/v.1.0.0/changeset/2024-01-31-add-test-data.sql
+
