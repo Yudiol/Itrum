@@ -15,11 +15,11 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
 public class WalletServiceImpl implements WalletService {
 
     private final WalletRepository repository;
 
+    @Transactional(readOnly = true)
     public Long viewAccountBalance(UUID walletId) {
         return repository.findAmountByWalletId(walletId)
                 .orElseThrow(() -> new NotFoundException(" wallet ", walletId.toString()));
