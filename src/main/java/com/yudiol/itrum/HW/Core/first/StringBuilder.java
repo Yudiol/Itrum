@@ -4,16 +4,19 @@ public class StringBuilder {
 
     public String str = "";
 
+    private final CareTaker careTaker = new CareTaker();
+
     public void append(String str) {
+        save();
         this.str += str;
     }
 
-    public Memento save() {
-        return new Memento(str);
+    private void save() {
+         careTaker.setMemento(new Memento(str));
     }
 
-    public void undo(Memento memento) {
-        str = memento.str;
+    public void undo() {
+        this.str = careTaker.getMemento().str;
     }
 
     @Override

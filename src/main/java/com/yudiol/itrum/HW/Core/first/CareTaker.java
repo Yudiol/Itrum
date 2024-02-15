@@ -7,7 +7,11 @@ public class CareTaker {
     Stack<Memento> list = new Stack<>();
 
     public Memento getMemento() {
-        return list.pop();
+        if (!list.isEmpty()) {
+            return list.pop();
+        } else {
+            return new Memento("");
+        }
     }
 
     public void setMemento(Memento memento) {

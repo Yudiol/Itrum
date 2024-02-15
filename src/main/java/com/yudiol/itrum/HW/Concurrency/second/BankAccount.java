@@ -10,11 +10,11 @@ public class BankAccount {
         this.amount = amount;
     }
 
-    public void deposit(Integer amount) {
+    public synchronized void deposit(Integer amount) {
         this.amount += amount;
     }
 
-    public void withdraw(Integer amount) {
+    public synchronized void withdraw(Integer amount) {
         this.amount -= amount;
     }
 

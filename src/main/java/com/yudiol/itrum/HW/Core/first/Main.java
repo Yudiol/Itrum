@@ -4,33 +4,46 @@ public class Main {
     public static void main(String[] args) {
 
 
-        CareTaker careTaker = new CareTaker();
-        java.lang.StringBuilder stringBuilder = new java.lang.StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
+        System.out.println("Append");
         stringBuilder.append("0");
         System.out.println("stringBuilder = " + stringBuilder);
 
         stringBuilder.append("1");
         System.out.println("stringBuilder = " + stringBuilder);
 
-
-        System.out.println("Save memento");
-        careTaker.setMemento(stringBuilder.save());
-
         stringBuilder.append("2");
         System.out.println("stringBuilder = " + stringBuilder);
-
-        careTaker.setMemento(stringBuilder.save());
-        System.out.println("Save memento");
 
         stringBuilder.append("3");
         System.out.println("stringBuilder = " + stringBuilder);
 
-        stringBuilder.undo(careTaker.getMemento());
+        stringBuilder.undo();
         System.out.println("Undo memento");
         System.out.println("stringBuilder = " + stringBuilder);
 
-        stringBuilder.undo(careTaker.getMemento());
+        System.out.println("Append");
+        stringBuilder.append("3");
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        stringBuilder.undo();
+        System.out.println("Undo memento");
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        stringBuilder.undo();
+        System.out.println("Undo memento");
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        stringBuilder.undo();
+        System.out.println("Undo memento");
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        stringBuilder.undo();
+        System.out.println("Undo memento");
+        System.out.println("stringBuilder = " + stringBuilder);
+
+        stringBuilder.undo();
         System.out.println("Undo memento");
         System.out.println("stringBuilder = " + stringBuilder);
     }
