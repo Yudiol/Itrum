@@ -12,7 +12,7 @@ public class StringBuilder {
     }
 
     private void save() {
-         careTaker.setMemento(new Memento(str));
+         careTaker.addMemento(new Memento(str));
     }
 
     public void undo() {

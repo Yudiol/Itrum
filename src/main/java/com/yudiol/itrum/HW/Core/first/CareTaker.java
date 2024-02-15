@@ -14,7 +14,7 @@ public class CareTaker {
         }
     }
 
-    public void setMemento(Memento memento) {
+    public void addMemento(Memento memento) {
         list.push(memento);
     }
 }
