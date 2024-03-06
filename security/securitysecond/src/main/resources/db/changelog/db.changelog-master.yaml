@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/v.1.0.0/changeset/2024-03-04-create_tables.sql
+  - include:
+      file: db/changelog/v.1.0.0/changeset/2024-03-04-add-test-data.sql
+

@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+jwt:
+  lifetime: 30m
+  secret: mySecretKey12345677890gfjhlyjhfvghlftydddtydryjetyjht3465gdfgIGUIG
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/securityfirstBD
+    username: user
+    password: password
