@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/admin_realm
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/admin_realm
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: security_client
+            client-secret: 9V8hLjdyP4aE8UMswYxGFY95lriXhoXa
+            scope: openid
